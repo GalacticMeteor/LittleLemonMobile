@@ -39,24 +39,50 @@
 
 body {
   background: #ededed;
+  margin: 0;
+  padding: 0;
 }
 
-.iphone-frame {
-  width: 430px;
-  height: 932px;
-  margin: 32px auto;
-  border-radius: 48px;
-  border: 8px solid #222;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 1.5px 0 #888 inset;
-  overflow: hidden;
+/* Main responsive container */
+.responsive-app-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #ededed;
+}
+
+/* Card for desktop */
+.responsive-card {
   background: #f7f7f7;
-  position: relative;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  margin: 40px 0;
+  width: 100%;
+  max-width: 600px;
+  min-height: 700px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  overflow: hidden;
 }
 
-.home-container {
+@media (max-width: 700px) {
+  .responsive-card {
+    border-radius: 0;
+    margin: 0;
+    max-width: 100vw;
+    min-height: 100vh;
+    box-shadow: none;
+  }
+  .responsive-app-container {
+    align-items: stretch;
+  }
+}
+
+.home-container,
+.booking-container {
   width: 100%;
   height: 100%;
   background: #f7f7f7;
@@ -70,6 +96,17 @@ body {
   align-items: center;
   font-family: 'Segoe UI', Arial, sans-serif;
   position: relative;
+}
+
+/* Make buttons and text larger on desktop */
+@media (min-width: 700px) {
+  .book-btn, .checkout-btn {
+    font-size: 1.3rem;
+    padding: 18px 0;
+  }
+  .home-header h2, .booking-content h2 {
+    font-size: 2.2rem;
+  }
 }
 
 .home-header {

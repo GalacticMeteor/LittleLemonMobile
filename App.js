@@ -11,51 +11,53 @@ function App() {
   const [bookingData, setBookingData] = useState(null);
 
   return (
-    <div className="iphone-frame">
-      {screen === "home" && (
-        <div className="home-container">
-          <div className="home-header">
-            <h2>Welcome to</h2>
-            <div className="logo-box">
+    <div className="responsive-app-container">
+      <div className="responsive-card">
+        {screen === "home" && (
+          <div className="home-container">
+            <div className="home-header">
+              <h2>Welcome to</h2>
+              <div className="logo-box">
+                <img
+                  src={lemonLogo}
+                  alt="Little Lemon Logo"
+                  className="little-lemon-logo"
+                />
+              </div>
+            </div>
+            <div className="home-image-section">
               <img
-                src={lemonLogo}
-                alt="Little Lemon Logo"
-                className="little-lemon-logo"
+                src={homeImage}
+                alt="Restaurant home"
+                className="home-bg-image"
               />
             </div>
+            <button className="book-btn" onClick={() => setScreen("booking")}>Book a Table</button>
           </div>
-          <div className="home-image-section">
-            <img
-              src={homeImage}
-              alt="Restaurant home"
-              className="home-bg-image"
-            />
-          </div>
-          <button className="book-btn" onClick={() => setScreen("booking")}>Book a Table</button>
-        </div>
-      )}
-      {screen === "booking" && (
-        <BookingScreen
-          onBack={() => setScreen("home")}
-          onCheckout={data => {
-            setBookingData(data);
-            setScreen("summary");
-          }}
-        />
-      )}
-      {screen === "summary" && bookingData && (
-        <SummaryScreen
-          booking={bookingData}
-          onBack={() => setScreen("booking")}
-          onDone={() => setScreen("thankyou")}
-        />
-      )}
-      {screen === "thankyou" && (
-        <ThankYouScreen onHome={() => {
-          setBookingData(null);
-          setScreen("home");
-        }} />
-      )}
+        )}
+        {screen === "booking" && (
+          <BookingScreen
+            onBack={() => setScreen("home")}
+            onCheckout={data => {
+              setBookingData(data);
+              setScreen("summary");
+            }}
+          />
+        )}
+        {screen === "summary" && bookingData && (
+          <SummaryScreen
+            booking={bookingData}
+            onBack={() => setScreen("booking")}
+            onDone={() => setScreen("thankyou")}
+          />
+        )}
+        {screen === "thankyou" && (
+          <ThankYouScreen onHome={() => {
+            setBookingData(null);
+            setScreen("home");
+          }} />
+        )}
+      </div>
     </div>
   );
 }
