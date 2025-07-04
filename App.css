@@ -1,0 +1,138 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background: #ededed;
+}
+
+.iphone-frame {
+  width: 430px;
+  height: 932px;
+  margin: 32px auto;
+  border-radius: 48px;
+  border: 8px solid #222;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 1.5px 0 #888 inset;
+  overflow: hidden;
+  background: #f7f7f7;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.home-container {
+  width: 100%;
+  height: 100%;
+  background: #f7f7f7;
+  min-height: unset;
+  max-width: unset;
+  margin: 0;
+  box-shadow: none;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  position: relative;
+}
+
+.home-header {
+  width: 100%;
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.home-header h2 {
+  color: #3d4c3d;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.logo-box {
+  border: 2px solid #3d4c3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  margin: 0 auto 8px auto;
+  width: 80%;
+  background: #fff;
+}
+
+.little-lemon-logo {
+  max-width: 220px;
+  height: auto;
+  display: block;
+}
+
+.home-image-section {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.home-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.book-btn {
+  width: 90%;
+  margin: 24px auto 24px auto;
+  padding: 14px 0;
+  background: #ffe031;
+  color: #222;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+}
+
+.book-btn:hover {
+  background: #ffd600;
+}

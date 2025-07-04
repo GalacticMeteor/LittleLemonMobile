@@ -1,0 +1,139 @@
+.booking-container {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 0 0 40px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow-y: auto;
+}
+
+.back-btn {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: #f7f7f7;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  color: #3d4c3d;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0 0 24px 24px;
+  margin-bottom: 0;
+}
+
+.booking-content {
+  padding: 24px 24px 0 24px;
+  width: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.booking-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.booking-content .desc {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 18px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.form-group select,
+.form-group input[type="date"] {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.form-group small {
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+.guests-group {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.guests-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.guests-controls button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  font-size: 1.2rem;
+  color: #222;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guests-controls span {
+  font-size: 1.2rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+.checkout-btn {
+  width: 100%;
+  margin: 32px 0 24px 0;
+  padding: 16px 0;
+  background: #ffe031;
+  color: #222;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+}
+
+.checkout-btn:hover {
+  background: #ffd600;
+} 
